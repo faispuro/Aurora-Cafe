@@ -11,8 +11,6 @@ https://faispuro.github.io/Aurora-Cafe/
 - CSS
 - JavaScript
 
-## 📸 Preview
-(agregá una captura después)
 
 ---
 
