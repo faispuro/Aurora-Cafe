@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PALETA */
+:root {
+    --green-main: #0B6B4A;
+    --green-dark: #07583c;
+    --green-light: #1fa37a;
+    --text-dark: #1a1a1a;
+    --text-muted: #5f6f68;
+    --bg-light: #f7f9f8;
+    --line-dashed: #9bcdbb;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url("imagenes/hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.hero-content h1 .sub-h1 {
+    font-size: 36px;                  /* más pequeño que Búlgaro */
+    display: block;                    /* respeta salto de línea */
+    line-height: 1.05;                 /* un poco más pegado a Búlgaro */
+    color: rgba(255, 255, 255, 0.95); /* más visible que 100% blanco puro */
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    margin-left: 8%;
+    z-index: 1;
+}
+
+.small-text {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);  /* más legible sobre fondos oscuros */
+}
+.btn {
+    background-color: var(--green-main);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.btn:hover {
+    background-color: var(--green-dark);
+}
+
+/* SECCIONES */
+section {
+    padding: 80px 10%;
+}
+
+/* SOBRE NOSOTROS */
+.about {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.about h2 {
+    font-size: 36px;
+    color: var(--green-main);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+    line-height: 1.7;
+}
+/* ========================= */
+/* TESTIMONIOS ESTILO GOOGLE */
+/* ========================= */
+
+.testimonials {
+    background-color: #f1f6f4; /* verde muy suave */
+    padding: 80px 10%;
+}
+
+
+.testimonials h2 {
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--green-main);
+    margin-bottom: 50px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* CARD */
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+
+/* HEADER */
+.testimonial-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #202124; /* negro Google */
+}
+
+.testimonial-stars {
+    font-size: 14px;
+    color: #fbbc04; /* amarillo Google */
+    letter-spacing: 1px;
+}
+
+/* TEXTO */
+.testimonial-text {
+    font-size: 14px;
+    color: #5f6368; /* gris Google */
+    line-height: 1.5;
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+
+.menu {
+    background-color: white;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green-main);
+    margin-bottom: 10px;
+}
+
+.menu-footer {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.order-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green-main);
+}
+
+.temp-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 10px auto 0;
+    line-height: 1.5;
+}
+
+.menu-items {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* SECCIONES DEL MENU */
+.menu-section {
+    margin-bottom: 60px;
+}
+
+.menu-section h3 {
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green-main);
+    margin-bottom: 25px;
+}
+
+.menu-section h4 {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--green-main);
+    margin-bottom: 20px;
+}
+
+.small-section {
+    margin-top: 40px;
+}
+
+/* ========================= */
+/* ITEM MENU (CORREGIDO) */
+/* ========================= */
+
+.menu-item {
+    margin-bottom: 22px;
+}
+
+/* FILA SUPERIOR: nombre ---- precio */
+.item-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-name {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+.item-line {
+    flex: 1;
+    border-bottom: 2px dashed var(--line-dashed);
+}
+
+.item-price {
+    font-weight: 800;
+    color: var(--green-main);
+    white-space: nowrap;
+}
+
+/* DESCRIPCIÓN ABAJO (NO CORTA LA LINEA) */
+.item-desc {
+    font-size: 13px;
+    color: var(--green-light);
+    margin-top: 6px;
+    margin-left: 2px;
+    font-weight: 500;
+}
+
+/* ===================== */
+/* EXTRAS – CARTEL VERDE */
+/* ===================== */
+
+.menu-extras {
+    margin-top: 25px;
+    background-color: var(--green-main);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+/* TITULO EXTRAS */
+.menu-extras h5 {
+    grid-row: span 2;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center;
+}
+
+/* ITEM */
+.extra-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* NOMBRE */
+.extra-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* LINEA */
+.extra-line {
+    flex: 1;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.7);
+    margin-bottom: 3px;
+}
+
+/* PRECIO */
+.extra-price {
+    font-size: 13px;
+    font-weight: 900;
+    color: white;
+    white-space: nowrap;
+}
+
+/* ===================== */
+/* FILTRADOS */
+/* ===================== */
+
+.filtrados-title {
+    font-size: 42px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green-main);
+    margin-bottom: 20px;
+}
+
+/* ENCABEZADO TOLVA / INVITADO */
+.filtrados-head {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.price-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green-light);
+    text-transform: uppercase;
+}
+/* mueve los labels a las columnas de precios */
+.filtrados-head .price-label:first-of-type {
+    grid-column: 3;
+}
+
+.filtrados-head .price-label:last-of-type {
+    grid-column: 4;
+}
+
+/* ITEM FILTRADO */
+.filtrado-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.filtrado-item .item-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--green-main);
+    white-space: nowrap;
+}
+
+.filtrado-item .item-line {
+    border-bottom: 2px dashed var(--line-dashed);
+    margin-bottom: 4px;
+}
+
+/* CONSULTAR */
+.consult-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green-light);
+    text-transform: uppercase;
+}
+
+/* FILTRADO BUNN DESTACADO */
+.highlight {
+    background-color: var(--green-main);
+    color: white !important;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+big-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ========================= */
+/* BIG COFFEE ESTILO CARTA */
+/* ========================= */
+
+.big-header {
+    margin-bottom: 20px;
+}
+
+.big-title {
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green-main);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+/* 360ML */
+.big-ml {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--green-main);
+    letter-spacing: 1px;
+}
+
+/* SOLO TAKE AWAY */
+.big-takeaway {
+    margin-top: -20px; 
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+}
+/* PARTE SUAVE DEL NOMBRE */
+.item-muted {
+    font-weight: 600;
+    color: #2B2B2B; /* verde más leve */
+    text-transform: none;
+}
+/* ========================= */
+/* SECCIÓN TÉ */
+/* ========================= */
+
+.tea-section h3 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+/* PRECIO LINDO AL LADO DEL TÍTULO */
+.tea-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--green-main);
+}
+/* ========================= */
+/* BULGARO EN TU EVENTO */
+/* ========================= */
+
+.event-section {
+    background-color: var(--bg-light);
+    padding: 80px 10%;
+}
+
+.event-box {
+    max-width: 700px;
+    margin: auto;
+    border: 2px dashed var(--line-dashed);
+    padding: 40px;
+    text-align: center;
+}
+
+.event-box h3 {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--green-main);
+    margin-bottom: 15px;
+}
+
+.event-box p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.event-btn {
+    display: inline-block;
+    background-color: var(--green-main);
+    color: white;
+    padding: 14px 34px;
+    border-radius: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+}
+
+.event-btn:hover {
+    background-color: var(--green-dark);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background-color: var(--green-main);
+    color: white;
+    width: 100%;
+}
+
+/* contenedor interno */
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 10% 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* MARCA */
+.footer-brand h3 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* INFO */
+.footer-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+/* REDES */
+.footer-social a {
+    display: block;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+    opacity: 0.75;
+}
+
+/* PIE */
+.footer-bottom {
+    margin-top: 40px;
+    padding: 20px 10% 30px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+/* ========================= */
+/* BOTON WHATSAPP FLOTANTE */
+/* ========================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+.whatsapp-float {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+}
+/* ESTADO INICIAL */
+.about,
+.testimonial-card,
+.menu-section,
+.menu-item,
+.event-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* CUANDO APARECEN */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
